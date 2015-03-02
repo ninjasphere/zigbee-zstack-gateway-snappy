@@ -1,3 +1,3 @@
 #!/bin/bash
-DEBUG=
-DEBUG=$DEBUG ./servers/zigbeeHAgw bbb
+export LD_LIBRARY_PATH=./lib
+./servers/zigbeeHAgw bbb
