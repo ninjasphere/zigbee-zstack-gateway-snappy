@@ -1,0 +1,16 @@
+name: zigbee-zstack-gateway
+vendor: Elliot Shepherd <elliot@ninjablocks.com>
+architecture: armhf
+version: 1.0.0
+icon: meta/logo.svg
+services:
+ - name: zigbee-zstack-gateway
+   description: "ZigBee Gateway"
+   start: ./start.sh
+binaries:
+ - name: ./bin/bbb_usbreset.bin
+ - name: ./bin/gw_soc_fw_version_query.bin
+ - name: ./bin/sbl_tool.bin
+ - name: ./bin/tty-reset.ssh
+ports:
+  required: 2525,2541,2540
