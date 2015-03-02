@@ -47,7 +47,7 @@ ZBEE_RESET_INACTIVE_VALUE=1
 
 ZBEE_RESET_EXPLICIT_REVERSE=1
 PROCESSOR_ZBEE_RESET_PIN=
-ZBEE_SERIAL_PORT=tty.zigbee
+ZBEE_SERIAL_PORT=ttyO4
 ignore_zbee_reset=0
 
 if [ -n "$VERBOSE_GW_SCRIPT" ]; then
@@ -297,14 +297,16 @@ else
 		#ZBEE_RESET_EXPLICIT_REVERSE=0
 		#ZBEE_RESET_GPIO_LINE=77
 		#ZBEE_SERIAL_PORT=ttyACM0
-		ZBEE_SERIAL_PORT=tty.zigbee
+		#ZBEE_SERIAL_PORT=tty.zigbee
+		ZBEE_SERIAL_PORT=ttyO4
 		setup_for_arm
 		;;
 
 	x86)
 		ignore_zbee_reset=1
 		#ZBEE_SERIAL_PORT=ttyACM0
-		ZBEE_SERIAL_PORT=tty.zigbee
+		#ZBEE_SERIAL_PORT=tty.zigbee
+		ZBEE_SERIAL_PORT=ttyO4
 		setup_for_x86
 		;;
 
@@ -1184,4 +1186,3 @@ do
 done
 
 echo $0 exiting
-
