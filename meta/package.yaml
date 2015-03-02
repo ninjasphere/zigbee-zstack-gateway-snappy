@@ -14,3 +14,6 @@ binaries:
  - name: ./bin/tty-reset.ssh
 ports:
   required: 2525,2541,2540
+integration:
+  zigbee-zstack-gateway:
+    apparmor-profile: meta/zigbee-stack-gateway.profile
